@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Резюме - Роман Явчак</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="page-header">
+    <h1 id="main-title">Роман Явчак</h1>
+    <p class="subtitle">Кібербезпека та захист інформації / Початківець у веброзробці</p>
+    <nav aria-label="Основна навігація">
+      <a href="#about">Про мене</a>
+      <a href="#skills">Навички</a>
+      <a href="#experience">Досвід</a>
+      <a href="#education">Освіта</a>
+      <a href="#reviews">Відгуки</a>
+      <a href="#contacts">Контакти</a>
+    </nav>
+    <button id="theme-toggle" type="button" aria-pressed="false">Увімкнути нічну тему</button>
+  </header>
+
+  <main class="container">
+    <section class="card" id="about">
+      <h2>Про мене</h2>
+      <p>Студент 2-го курсу кафедри захисту інформації. Вивчаю основи веброзробки,
+        семантичну розмітку HTML5, роботу з Git та базовий стек сучасного вебу.</p>
+    </section>
+    <section class="card" id="skills">
+      <h2>Технічні навички</h2>
+      <ul>
+        <li>HTML5 (семантична розмітка)</li>
+        <li>Git / GitHub</li>
+        <li>Python, SQL</li>
+        <li>Основи мережевих протоколів та Linux</li>
+      </ul>
+    </section>
+    <section class="card" id="experience">
+      <h2>Досвід роботи та практика</h2>
+      <article>
+        <h3>Практичні завдання та лабораторні роботи</h3>
+        <p><strong>Термін:</strong> 2025 - теперішній час</p>
+        <ul>
+          <li>Розробка валідної структури вебсторінок відповідно до W3C.</li>
+          <li>Контроль версій коду за допомогою Git.</li>
+        </ul>
+      </article>
+    </section>
+    <section class="card" id="education">
+      <h2>Освіта</h2>
+      <h3>НУ «Львівська політехніка»</h3>
+      <p>Спеціальність 125 «Кібербезпека та захист інформації» (2025 - 2029)</p>
+    </section>
+    <section class="card full-width" id="reviews">
+      <h2>Відгуки роботодавців</h2>
+      <p class="muted">Навчальні коментарі з JSONPlaceholder</p>
+      <p id="reviews-status" role="status">Завантаження відгуків...</p>
+      <div id="reviews-list" class="reviews-list"></div>
+    </section>
+  </main>
+
+  <footer class="card page-footer" id="contacts">
+    <h2>Контакти</h2>
+    <p>Місто: Львів</p>
+    <p>Email: <a href="mailto:roman.yavchak.kb.2025@lpnu.ua">roman.yavchak.kb.2025@lpnu.ua</a></p>
+    <p>GitHub: <a href="https://github.com/roman0yavchak0cry-pac/cybersecurity-python-labs"
+      target="_blank" rel="noopener noreferrer">Профіль GitHub</a></p>
+    <button id="open-contact" type="button">Написати повідомлення</button>
+    <section aria-labelledby="storage-title" class="storage-section">
+      <h3 id="storage-title">Інформація у localStorage</h3>
+      <p id="storage-status" role="status"></p>
+      <dl id="storage-data"></dl>
+    </section>
+    <p class="muted">&copy; 2026 Роман Явчак</p>
+  </footer>
+
+  <dialog id="contact-modal" aria-labelledby="modal-title">
+    <div class="modal-heading">
+      <h2 id="modal-title">Зворотний зв'язок</h2>
+      <button id="close-contact" type="button">Закрити</button>
+    </div>
+    <!-- Замініть YOUR_FORM_ID на ID Вашої форми Formspree. -->
+    <form id="contact-form" action="https://formspree.io/f/xvkknryg" method="POST">
+      <label for="name">Ім'я</label>
+      <input id="name" name="name" type="text" autocomplete="name" required>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" required>
+      <label for="phone">Номер телефону</label>
+      <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+      <label for="message">Повідомлення</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <p id="form-status" role="alert"></p>
+      <button type="submit">Надіслати</button>
+    </form>
+  </dialog>
+</body>
+</html>
